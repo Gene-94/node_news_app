@@ -1,0 +1,143 @@
+body {
+  font-family: Arial;
+  margin: 0;
+  background-color: #f1f1f1;
+}
+
+
+.header {
+  overflow: hidden;
+  background-color: #c3e7cc;
+  padding: 20px 10px;
+}
+
+.logo {
+  float: left;
+  margin-top: 2px;
+}
+
+.header a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 30px;
+  border-radius: 4px;
+}
+
+.header a.logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
+.header a:hover {
+  background-color: #c3e7cc;
+  color: black;
+}
+
+.header a:hover {
+  background-color: #189b81;
+  color: black;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-right{
+  float: right;
+}
+
+  .news-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  
+  .news {
+    background-color: #fff;
+    padding: 1.5%;
+    border-radius: 10px;
+    margin: 2%;
+    flex-basis: calc(50% - 4%);
+    max-width: calc(40% - 4%);
+  }
+  
+  .news img {
+    width: 300px;
+    height: 250px;
+    border-radius: 4px;
+    margin-left: 30px;
+  }
+  
+  .news h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .news p {
+    margin-bottom: 10px;
+  }
+  
+  .news button {
+    display: block;
+    margin-top: 10px;
+    padding: 6px 12px;
+    background-color: #189b81;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .news button:hover {
+    background-color: #12684f;
+  }
+  
+
+  .footer {
+    background-color: #4d4d4d;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .footer-content {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  
+  .footer p {
+    margin-bottom: 10px;
+    color: #f1f1f1;
+  }
+  
+  .footer-links {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-links li {
+    display: inline;
+    margin-right: 10px;
+  }
+  
+  .footer-links li a {
+    color: #f1f1f1;
+    text-decoration: none;
+  }
+  
+  .footer-links li a:hover {
+    color: #189b81;
+  }
+  
+  .news-url {
+    display:none;
+  }

@@ -1,0 +1,3 @@
+tentar melhorar o header quando dou scroll
+pensar se ao clicar em ler mais abre um formulario com a noticia completa ou se abre outra página, mas que abrir um formulario é melhor
+colocar uma imagem do algarve se calhar no inicio ou fazer um carrocel mesmo

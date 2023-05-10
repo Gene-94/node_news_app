@@ -1,0 +1,79 @@
+<html>
+<head>
+  <link rel="stylesheet" href="bootstrap-5.3.0-alpha3-dist/css/bootstrap.min.css">
+  <script src="bootstrap-5.3.0-alpha3-dist/js/bootstrap.bundle.min.js" defer></script>
+  <link rel="stylesheet" href="libs/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <script
+			  src="https://code.jquery.com/jquery-3.6.4.min.js"
+			  integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+			  crossorigin="anonymous"></script>
+  <script src="libs/js/ajax.js" defer></script>
+  <script src="libs/js/scroll.js" defer></script>
+    <meta charset="UTF-8">
+  <title>Notícias de Tecnologia</title>
+</head>
+<body>
+
+  <div class="header" id="myHeader">
+    <img src="logo_simples.png" class="logo">
+    <a href="#default">Notícias de Tecnologia</a>
+    <div class="header-right">
+      <a href="#home">Início</a>
+      <a href="#abc">Notícias</a>
+      <a href="#contact">Não sei</a>
+      <a href="#sobre">Sobre</a>
+    </div>
+  </div>
+    <% var i = 0; %>
+    <div class="news-container">
+      <% articles.forEach((article)=> { 
+        var texto_noticia = "";
+        i=i+1;
+        %>
+      <div class="news">
+        <img class="news-image" src="<%= article.urlToImage %>" alt="Imagem Notícia">
+        <h2 class="news-title"><%= article.title %></h2>
+        <div class="news-description"><%= article.description %></div>
+        <div id="news_url_<%=i%>" class="news-url"><%= article.url %></div>
+        <button type="button" id="read_more" onclick="get_news(<%=i%>)" data-url="<%= article.url %>" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop<%=i%>">Ler mais</button>
+      </div>
+      <div class="modal fade" id="staticBackdrop<%=i%>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h4 class="news-title"><%= article.title %></h4>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div> 
+            <!-- Modal Body -->
+            <div class="modal-body">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class=".col-md-3 .offset-md-9">
+                    <img class="news-image" src="<%= article.urlToImage %>" alt="Imagem Notícia" width="430px" height="280px">
+                  </div>
+                </div>
+              <div id="modal_content_<%=i%>" class="news-content"></div>
+            </div>
+          </div>
+        </div>
+       </div>
+      </div>
+      <% }) %>
+
+
+    </div>
+  <footer class="footer">
+    <div class="footer-content">
+      <p>&copy; 2023 Tec Algarve. Todos os direitos reservados.</p>
+      <ul class="footer-links">
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#contato">Contato</a></li>
+        <li><a href="#termos">Termos de Uso</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>
+
